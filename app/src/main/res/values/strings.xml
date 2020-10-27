@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">VariasPantallas</string>
+    <string name="btn_activity2">ir a pantalla 2</string>
+    <string name="backScreen1">volver a la pantala 1</string>
+    <string name="edt_habitantes">nº habitantes</string>
+    <string name="edt_nombre">Nombre de la ciudad</string>
+    <string name="txt_recibido">TextView</string>
+</resources>
