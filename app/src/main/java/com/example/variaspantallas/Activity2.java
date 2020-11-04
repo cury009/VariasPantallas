@@ -21,11 +21,15 @@ public class Activity2 extends AppCompatActivity {
         //String nombre = intent.getStringExtra(MainActivity.EXTRA_NOMBRE);
         //int habitantes = intent.getIntExtra(MainActivity.EXTRA_HABITANTES, 0);
 
-        Bundle extras = intent.getExtras();
-        String nombre = extras.getString(MainActivity.EXTRA_NOMBRE);
-        int habitantes = extras.getInt(MainActivity.EXTRA_HABITANTES);
+        //Bundle extras = intent.getExtras();
+        //String nombre = extras.getString(MainActivity.EXTRA_NOMBRE);
+        //int habitantes = extras.getInt(MainActivity.EXTRA_HABITANTES);
+        Ciudad c = (Ciudad) intent.getSerializableExtra(MainActivity.EXTRA_OBJETO_CIUDAD);
+        String nombre = c.getNombre();
+        int habitantes = c.getHabitantes();
         String texto_recibido = "nombre: "+nombre+ "\n" +"habitantes"+ String.valueOf(habitantes);
         txt_recibido.setText(texto_recibido);
+
 
     }
 

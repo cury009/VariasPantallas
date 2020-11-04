@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_NOMBRE = "nombre" ;
     public static final String EXTRA_HABITANTES = "habitantes";
+    public static final String EXTRA_OBJETO_CIUDAD = "objetoCiudad";
     EditText edt_nombre = null;
     EditText edt_numero = null;
     @Override
@@ -28,9 +29,11 @@ public class MainActivity extends AppCompatActivity {
         String nombreCiudad = String.valueOf(edt_nombre.getText());
         int habitantes = Integer.valueOf(String.valueOf(edt_numero.getText()));
         Intent intent = new Intent(this,Activity2.class);
+        Ciudad c = new Ciudad (nombreCiudad, habitantes);
+        intent.putExtra(EXTRA_OBJETO_CIUDAD, c);
         //--------------------------------------------------------------
-        intent.putExtra(EXTRA_NOMBRE, nombreCiudad);
-        intent.putExtra(EXTRA_HABITANTES, habitantes);
+        //intent.putExtra(EXTRA_NOMBRE, nombreCiudad);
+        //intent.putExtra(EXTRA_HABITANTES, habitantes);
         startActivity(intent);
     }
 }
